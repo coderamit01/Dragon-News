@@ -1,4 +1,3 @@
-import React from 'react';
 import LatestNews from '../Components/Latestnews/LatestNews';
 import Navbar from '../Components/Navbar/Navbar';
 import Categories from '../Components/Categories/Categories';

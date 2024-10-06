@@ -1,5 +1,4 @@
-import React from 'react';
-import { BiBookmark, BiShareAlt, BiSolidShow, BiSolidStar } from 'react-icons/bi';
+import { BiSolidShow, BiSolidStar } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import PostItemTop from '../PostItemTop/PostItemTop';
 
