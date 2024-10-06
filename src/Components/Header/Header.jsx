@@ -3,7 +3,7 @@ import Logo from '../../assets/images/logo.png'
 
 const Header = () => {
   return (
-    <div className='container mx-auto px-3 py-3'>
+    <div className='container mx-auto px-3 pb-3 pt-8'>
       <div className='text-center space-y-1'>
       <img src={Logo} alt='' className='mx-auto' />
       <p className='text-base text-gray-500 font-Poppins font-d_400'>Journalism Without Fear or Favour</p>
