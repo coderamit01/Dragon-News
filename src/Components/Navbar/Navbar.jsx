@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end space-x-3 px-0">
         <img src={ProfileImg} alt='' className='w-10 h-10 object-contain'/>
-        <Link to='/' className="py-2 px-8 bg-gray-950 text-white">LogIn</Link>
+        <Link to='/login' className="py-2 px-8 bg-gray-950 text-white">LogIn</Link>
       </div>
     </div>
   );
