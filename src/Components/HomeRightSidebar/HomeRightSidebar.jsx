@@ -9,7 +9,7 @@ import zone3 from '../../assets/images/qZone3.png';
 
 const HomeRightSidebar = () => {
   return (
-    <div>
+    <div className="lg:sticky lg:top-4 lg:self-start">
       <SectionTitle title="LogIn With" />
       <div className='space-y-2 pt-3'>
         <LoginBtn title="Login with Google" icon={<BiLogoGoogle />} />

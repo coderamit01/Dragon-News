@@ -14,7 +14,7 @@ const Home = () => {
       <div className='container mx-auto px-3 py-10'>
         <div className='grid md:grid-cols-4 gap-6'>
           <Categories />
-          <div className='col-span-2 md:col-span-3 lg:col-span-2'>
+          <div className='md:col-span-2'>
             <Posts />
           </div>
           <HomeRightSidebar />

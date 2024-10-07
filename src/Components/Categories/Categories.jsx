@@ -12,7 +12,7 @@ const Categories = () => {
   },[])
 
   return (
-    <div>
+    <div className="lg:sticky lg:top-4 lg:self-start">
       <SectionTitle title="All Caterogy" />
       <div className='flex flex-col pt-2'>
           {
