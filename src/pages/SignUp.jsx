@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Components/Provider/AuthProvider';
 
 const SignUp = () => {
   const {user,userRegister,profileUpdate} = useContext(AuthContext);
-
+  const navigate = useNavigate();
+  console.log(location);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -17,12 +18,11 @@ const SignUp = () => {
     .then((userCredential) => {
       profileUpdate(name)
       .then(() => {
-        
+        navigate('/login');
       })
       .catch((error) => {
         
       })
-      console.log(userCredential.user);
     })
     .catch((error) => {
       console.log(error)
