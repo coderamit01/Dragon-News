@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom';
 import ProfileImg from '../../assets/images/user.png'
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
+  const {user,logOut} = useContext(AuthContext);
+  const signOut = () => {
+    logOut()
+    .then(() =>{
+      
+    })
+    .catch(() =>{
+
+    })
+  }
+
   const navItems = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/'>About</Link></li>
@@ -39,7 +52,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-end space-x-3 px-0">
         <img src={ProfileImg} alt='' className='w-10 h-10 object-contain'/>
-        <Link to='/login' className="py-2 px-8 bg-gray-950 text-white">LogIn</Link>
+        {
+          user ? <Link onClick={signOut} to='#' className="py-2 px-8 bg-gray-950 text-white">LogOut</Link> : <Link to='/login' className="py-2 px-8 bg-gray-950 text-white">LogIn</Link>
+        }
+        
       </div>
     </div>
   );

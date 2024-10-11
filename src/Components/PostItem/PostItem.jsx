@@ -7,7 +7,7 @@ const PostItem = ({ post }) => {
 
   let star = [];
   for (let i = 0; i < Math.round(rating.number); i++) {
-    star.push(<BiSolidStar className='text-[#FF8C47] text-base' />);
+    star.push(<BiSolidStar key={i} className='text-[#FF8C47] text-base' />);
   }
 
   return (
@@ -15,7 +15,7 @@ const PostItem = ({ post }) => {
       <Link to={`post/${_id}`}>
         <PostItemTop post={post} />
         <div className='p-3 space-y-3'>
-          <h2 className='font-Poppins font-d_700 text-xl text-gray-900'><Link to="#">{title}</Link></h2>
+          <h2 className='font-Poppins font-d_700 text-xl text-gray-900'><span to="#">{title}</span></h2>
           <img src={image_url} alt={title} className='' />
           <p className='font-Poppins font-base font-d_400 text-gray-500 line-clamp-3'>{details}</p>
           <p className='text-[#FF8C47] font-Poppins font-base font-d_500'>Read More</p>
